@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Информация о пользователе</title>
+</head>
+<body>
+<!-- Include _menu.html -->
+<th:block th:include="/_menu"></th:block>
+
+
+<h2>Страница информации о пользователе</h2>
+<h3>Добро пожаловать : <span th:utext="${#request.userPrincipal.name}"></span></h3>
+<b>Это защищенная страница!</b>
+
+<br/><br/>
+
+<div th:if="${userInfo != null}" th:utext="${userInfo}"></div>
+
+</body>
+
+</html>

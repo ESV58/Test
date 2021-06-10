@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню</title>
+</head>
+<body>
+<div xmlns:th="http://www.thymeleaf.org"
+     style="border: 1px solid #ccc;padding:5px;margin-bottom:20px;">
+
+    <a th:href="@{/}">Домой</a>
+
+    | &nbsp;
+
+    <a th:href="@{/userInfo}">Информация о пользователе</a>
+
+    | &nbsp;
+
+    <a th:href="@{/admin}">Информация об админе</a>
+
+    | &nbsp;
+
+    <a th:if="${#request.userPrincipal != null}" th:href="@{/logout}">Выход</a>
+
+</div>
+</body>
+</html>
